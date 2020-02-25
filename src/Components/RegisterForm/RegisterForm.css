@@ -1,0 +1,7 @@
+.registerform-container{
+    width: 30vw;
+    height: 55vh;
+    box-shadow: 1px 1px 5px 1px lightgray;
+    border-radius: 0.5em;
+    padding: 2em;
+}

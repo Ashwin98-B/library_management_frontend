@@ -1,0 +1,89 @@
+.cards-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fas{
+    color: white;
+    width:10vw;
+}
+
+.cards{
+    padding: 1em;
+    margin-top: 2em;
+    width: 20vw;
+    height: 10vh;
+    background-color: #6c5ce7;
+    border-radius: 0.4em;
+    display: flex;
+    align-items: center;
+}
+
+
+.book-count{
+    font-size: 30px;
+    color: white;
+}
+
+.big-cards-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.big-cards{
+    padding: 1em;
+    margin-top: 2em;
+    margin-right: 2em;
+    margin-left: 2em;
+    width: 31vw;
+    height: 60vh;
+    background-color: white;
+    border-radius: 0.4em;
+    /* box-shadow: 1px 1px 1px rgb(219, 213, 213); */
+}
+
+.count{
+    color: white;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.mincard{
+    color: white;
+    font-family: 'Montserrat', ;
+    font-weight: 300;
+}
+
+.xs-card{
+    padding-left: 2em;
+    display: flex;
+    align-items: center;
+    background-color: White;
+    border-radius: 0.3em;
+    height: 8vh;
+    box-shadow: 1px 1px 6px 1px lightgray;
+}
+
+.card-head{
+    /* color: WHITE; */
+    font-family: 'Montserrat', ;
+    font-weight: 200;
+    text-align: center;
+    font-size: 24px;
+}
+
+.xs-card p{
+    font-family: 'Montserrat', ;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.xs-card p span {
+    font-weight: 400;
+    color: #6c5ce7;
+    /* font-style: italic; */
+}
+.far{
+    margin-right: 1em;
+}

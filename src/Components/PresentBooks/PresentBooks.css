@@ -1,0 +1,59 @@
+.present-outerwrap{
+    height: 87vh;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.5em;
+    overflow-y: scroll;
+}
+
+.presentbooks-card{
+    height: 20vh;
+    width: 74vw;
+    background-color: white;
+    margin: 1.5em;
+    border-radius: 1em;
+    box-shadow: 1px 1px 5px 2px lightgray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.book-content{
+    /* border-right: 1px solid lightgray ; */
+    /* border-left: 1px solid lightgray; */
+    /* padding: 0 5em 0 0; */
+    width: 40%;
+}
+
+
+.book-title{
+    margin: 0;
+    font-size:50px ;
+    font-family: 'Montserrat', ;
+    font-weight: 100;
+    color: #6c5ce7;
+}
+
+.book-author{
+    font-family: 'Montserrat', ;
+    color: rgb(190, 188, 188);
+    margin-right: 2em;
+}
+
+.auth-name{
+    font-family: 'Montserrat', ;
+    color: black;
+    font-weight: 200;
+    font-size: 24px;
+}
+
+.sub-content{
+    display: flex;
+}
+
+.book-img{
+    font-family: 'Montserrat', ;
+    font-weight: 200;
+    font-size: 40px;
+    color:#6c5ce7 ;
+}

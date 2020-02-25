@@ -1,0 +1,85 @@
+/* PAGE LAYOUT STYLE */
+
+.outer-wrapper {
+    display: flex;
+}
+
+/* SIDE NAV */
+.sidenav-wrapper{
+    height: 100vh;
+    width: 20vw;
+    border-right: 1px solid #adbada;
+}
+
+.sidenav-content{
+    list-style: none;
+    padding: 0;
+
+}
+.sidenav-content li p{
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+/* SIDENAV-HOVER */
+.sidenav-btn  :hover{
+    border-right: 2px solid rgb(108, 92, 231);
+    color: #6c5ce7;
+    cursor: pointer;
+    background:rgba(108, 92, 231, 0.1);
+
+}
+
+/* .sidenav-content li {
+    content : "DASHBOARD","ADD BOOKS";
+    border-right: 2px solid rgb(108, 92, 231);
+    color: #6c5ce7;
+    cursor: pointer;
+    background:rgba(108, 92, 231, 0.1);
+} */
+
+/* TOP NAV */
+.navcontent-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.topnav-wrapper{
+    width: 80vw;
+    height: 10vh;
+    border-bottom: 1px solid #adbada;
+}
+
+.greeting-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 1em;
+}
+
+.greeting-wrapper li{
+    margin:1em;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* CONTENT WRAP */
+
+.content-wrapper{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    background-color: #E7EAF6;
+    padding: 1em;
+}
+
+
+.home-button{
+    font-family: 'Montserrat', ;
+    font-size: 60px;
+    font-weight: 100;
+    margin-right: 0.2em;
+    /* margin-top: 0.5em; */
+    text-align: center;
+
+}

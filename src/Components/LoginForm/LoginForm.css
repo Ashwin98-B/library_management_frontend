@@ -1,0 +1,22 @@
+.loginform-container{
+    width: 30vw;
+    height: 50vh;
+    box-shadow: 1px 1px 5px 1px lightgray;
+    border-radius: 0.5em;
+    padding: 2em;
+}
+
+.inputform{
+    display: flex;
+    flex-flow: column;
+}
+
+.signin-btn{
+    text-align: center;
+}
+
+.register-btn{
+    text-decoration: underline;
+    text-align: center;
+    cursor: pointer;
+}
