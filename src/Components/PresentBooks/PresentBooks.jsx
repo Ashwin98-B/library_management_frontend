@@ -13,7 +13,7 @@ class PresentBooks extends Component {
     }
 
     getBooks = () => {
-        fetch("http://192.168.0.104:8080/api/v1/books/listBooks",{
+        fetch("https://library-management-backend.herokuapp.com/api/v1/books/listBooks",{
                 method : 'GET',
                 headers : {
                     'Content-Type' : 'application/json',
@@ -61,7 +61,7 @@ class PresentBooks extends Component {
                 quantity : item.quantity - 1,
                 issued_date : date,
             }
-            fetch('http://192.168.0.104:8080/api/v1/orders/placeOrder',{
+            fetch('https://library-management-backend.herokuapp.com/api/v1/orders/placeOrder',{
                 method : 'POST',
                 body : JSON.stringify(sentData),
                 headers : {
@@ -70,7 +70,7 @@ class PresentBooks extends Component {
                 }
             })
             .then(res => res.json())
-            .then((result) => {console.log("Order placed",result); this.getBooks();})
+            .then((result) => {console.log("Order placed",result); this.getBooks();alert('Order placed Successfully.')})
             .then(err => err)
         }
     }

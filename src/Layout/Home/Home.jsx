@@ -34,6 +34,14 @@ class Home extends Component {
         this.props.history.push(`/`)
     }
 
+    componentDidMount(){
+        if(localStorage.getItem('role') === 'USER'){
+            this.routeChange('home','books')
+        }
+        else{
+            this.routeChange('home','dashboard')
+        }
+    }
     roleAccordingNavigation = (role) =>{
         let layout = "";
         switch(role) {
@@ -51,6 +59,7 @@ class Home extends Component {
                         <li className="sidenav-btn"><p onClick={()=> this.routeChange('home','dashboard')}>DASHBOARD</p></li>
                         <li className="sidenav-btn"><p onClick={()=> this.routeChange('home','books')}>BOOKS</p></li>
                         <li className="sidenav-btn"><p onClick={()=> this.routeChange('home','edit')}>EDIT STOCKS</p></li>
+                        <li className="sidenav-btn"><p onClick={()=> this.routeChange('home','booksordered')}>BOOKS ORDERED</p></li>
                     </ul>
                 )
                 return layout; 

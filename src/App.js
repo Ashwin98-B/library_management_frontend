@@ -3,6 +3,7 @@ import LoginHome from './Layout/LoginHome/LoginHome';
 import {Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import History from './Utils/history';
 import React, { Component } from 'react'
+import Loading from './Components/Loading/Loading';
 // import LoadingScreen from './Components/LoadingScreen/LoadingScreen';
 
 class App extends Component {

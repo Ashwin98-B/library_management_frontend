@@ -55,7 +55,7 @@ class RegisterForm extends Component {
                     role : "USER"
                 }
                 console.log(JSON.stringify(data))
-                fetch("http://192.168.0.104:8080/api/v1/accounts/signup",{
+                fetch("https://library-management-backend.herokuapp.com/api/v1/accounts/signup",{
                     method : 'POST',
                     body : JSON.stringify(data),
                     headers : {

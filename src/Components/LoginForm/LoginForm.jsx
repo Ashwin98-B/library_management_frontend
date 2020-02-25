@@ -36,7 +36,7 @@ class LoginForm extends Component {
             password : this.state.pswd
         }
         if(this.state.email !== '' && this.state.pswd !== ''){
-            fetch("http://192.168.0.104:8080/api/v1/accounts/login",{
+            fetch("https://library-management-backend.herokuapp.com/api/v1/accounts/login",{
                 method : 'POST',
                 body : JSON.stringify(data),
                 headers : {

@@ -1,9 +1,11 @@
 .loading-container{
     display: flex;
+    position: absolute;
     justify-content: center;
-    background-color: rgba(0, 0, 0,0.1);
-    width: 100vw;
-    height: 80vh;
+    background-color: rgba(0, 0, 0,0.3);
+    width: 75.5vw;
+    height: 82vh;
+    align-items: center;
 }
 
 .loading-content{

@@ -12,7 +12,7 @@ class AddBooks extends Component {
             titlefield : "",
             authorfield : "",
             quantityfield : "",
-            showLoading : true
+            showLoading : false
         }
     }
     onChangeTitle = (event) => {
@@ -37,15 +37,24 @@ class AddBooks extends Component {
         this.setState({ showLoading : data})
     }
 
+    emptyState = () => {
+        this.setState({
+            titlefield : '',
+            authorfield : '',
+            quantityfield : ''
+        })
+    }
+
     addBooks = () => {
         if(this.state.titlefield !== '' && this.state.authorfield !== '' && this.state.quantityfield !== ''){
+            this.emptyState();
             this.showLoading(true);
             const data = {
                 book_name : this.state.titlefield,
                 author_name : this.state.authorfield,
                 quantity : this.state.quantityfield
             }
-            fetch('http://192.168.0.104:8080/api/v1/books/addBooks',{
+            fetch('https://library-management-backend.herokuapp.com/api/v1/books/addBooks',{
                 method : 'POST',
                 body :JSON.stringify(data) ,
                 headers : {
@@ -54,7 +63,7 @@ class AddBooks extends Component {
                 }
             })
             .then(res => res.json())
-            .then((result) => {console.log(result);this.showLoading(false);})
+            .then((result) => {console.log(result);this.showLoading(false);alert('Book added Successfully.')})
             .then(err => err)
         }
     }

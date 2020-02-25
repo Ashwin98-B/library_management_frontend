@@ -40,7 +40,7 @@ class EditStocks extends Component {
     }
 
     updateQuantity = (item,changeVal)=>{
-        fetch('http://192.168.0.104:8080/api/v1/books/updateBook',{
+        fetch('https://library-management-backend.herokuapp.com/api/v1/books/updateBook',{
             method : 'POST',
             body : JSON.stringify({ book_id : item.id, quantity : changeVal}),
             headers : {
@@ -55,7 +55,7 @@ class EditStocks extends Component {
 
 
     getBooks = () => {
-        fetch('http://192.168.0.104:8080/api/v1/books/listBooks',{
+        fetch('https://library-management-backend.herokuapp.com/api/v1/books/listBooks',{
             method : 'GET',
             headers : {
                 'Content-Type' : 'application/json',
@@ -76,7 +76,7 @@ class EditStocks extends Component {
     }
 
     deleteBook = (item) => {
-        fetch('http://192.168.0.104:8080/api/v1/books/deleteBook',{
+        fetch('https://library-management-backend.herokuapp.com/api/v1/books/deleteBook',{
             method : 'POST',
             body : JSON.stringify({id : item.id}),
             headers : {
@@ -102,7 +102,7 @@ class EditStocks extends Component {
                     <div className="order-btn">
                         <Button onClick={()=>this.showModal(item)} variant="contained" color="primary">EDIT</Button><br/><br/>
                         <Modal value = {this.state.item} show = {this.state.isShowing} manageShowState = {(data) => {this.changeShowState(data)}} quantity ={this.state.item ? this.state.item.quantity : null} updateData = {(item,changeVal) => {this.updateQuantity(item,changeVal)}}/>
-                        <Button onClick ={()=>this.deleteBook(item)} variant="contained" color="primary">DELETE</Button>
+                        {localStorage.getItem('role') !== 'STAFF' ? <Button onClick ={()=>this.deleteBook(item)} variant="contained" color="primary">DELETE</Button>: null }
                     </div>
                 </div>
         )

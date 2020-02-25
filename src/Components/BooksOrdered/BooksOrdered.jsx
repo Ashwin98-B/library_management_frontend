@@ -14,7 +14,7 @@ class BooksOrdered extends Component {
     }
 
     componentDidMount(){
-        fetch("http://192.168.0.104:8080/api/v1/orders/listOrders",{
+        fetch("https://library-management-backend.herokuapp.com/api/v1/orders/listOrders",{
                 method : 'POST',
                 body : JSON.stringify({user_id : localStorage.getItem('user_id')}),
                 headers : {
